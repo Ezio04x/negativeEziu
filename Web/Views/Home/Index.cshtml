@@ -1,0 +1,63 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+<html>
+    <head>
+
+        <script>
+            var Greeter = (function () {
+                function Greeter(element) {
+                    this.element = element;
+                    this.element.innerHTML += "The time is: ";
+                    this.span = document.createElement('span');
+                    this.element.appendChild(this.span);
+                    this.span.innerText = new Date().toUTCString();
+                }
+                Greeter.prototype.start = function () {
+                    var _this = this;
+                    this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
+                };
+                Greeter.prototype.stop = function () {
+                    clearTimeout(this.timerToken);
+                };
+                return Greeter;
+            }());
+            window.onload = function () {
+                var el = document.getElementById('content');
+                var greeter = new Greeter(el);
+                greeter.start();
+            };
+
+        </script>
+        
+    
+    </head>
+
+<body id="index">
+    <div class="jumbotron">
+        <h1>Welcome to Gaming Den</h1>
+        <p class="lead">Gaming Den is a place for those gamers who want to stay update with new games and Hardware.</p>
+        <p class="text-danger"><a href="#" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" >
+            <h2 style="color:aliceblue;"> Upcoming PC games </h2>
+            <p>
+                Get the  News for latest upcoming pc games
+            </p>
+            <p class="text-muted"><a class="btn btn-default" @Html.ActionLink("Click here", "Upcoming", "Home")> </a></p>
+        </div>
+            <div class="col-md-4">
+                <h2 style="color:aliceblue;"> Titan X</h2>
+                <p style="color:aliceblue;">The power of Titan X</p>
+                <p class="text-muted"><a class="btn btn-default" @Html.ActionLink("Click here", "TitanX", "Home")></a></p>
+            </div>
+        <div class="col-md-4">
+            <h2 style="color:black;"> RX480 </h2>
+            <p style="color:black;">AMD's RX 480 performance</p>
+            <p><a class="btn btn-default" @Html.ActionLink("Click here", "RX480", "Home")> </a></p>
+        </div>
+    </div>
+</body>
+    </html>

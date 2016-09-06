@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Its all about TitanX";
+}
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-state=1" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap/js/jquery-1.12.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="~/Scripts/file1.js"></script>
+    <script src="jQuery_Javascript/JavaScript.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+        var Greeter = (function () {
+    function Greeter(element) {
+        this.element = element;
+        this.element.innerHTML += "The time is: ";
+        this.span = document.createElement('span');
+        this.element.appendChild(this.span);
+        this.span.innerText = new Date().toUTCString();
+    }
+    Greeter.prototype.start = function () {
+        var _this = this;
+        this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
+    };
+    Greeter.prototype.stop = function () {
+        clearTimeout(this.timerToken);
+    };
+    return Greeter;
+}());
+        window.onload = function () {
+            var el = document.getElementById('content');
+            var greeter = new Greeter(el);
+            greeter.start();
+        };</script>
+    <title>
+        history website
+    </title>
+</head>
+ 
+<body id="titan"style="background-image: url('../../Images/the_witcher_3_wild_hunt_geralt_fanart-wallpaper-1920x1080.jpg');">
+    <div id="container">
+
+        <div class="main">
+
+            <div class="jumbotron" style="padding-left:5px;">
+
+
+                <h2 style="color:black;"> TITAN X Pascal </h2><hr />
+
+                <b>
+                   
+                    A flagship GPU launch by NVIDIA was the last thing we were expecting in the thick of Summer, especially given the market positioning of
+                    the GeForce GTX 1080, with some partners running riot with pricing (>$800 prices for some cards) and questionable market availability.
+                    NVIDIA managed to surprise us nonetheless by announcing its TITAN X Pascal graphics card barely 10 days ago, with market availability
+                    beginning 2nd August, 2016 and our review today.
+
+                    <img src="~/Images/GPU/nvidia-titan-x.jpg" img-responsive; width="290" align="right" vspace="5px" hspace="5px" />
+                    The most interesting aspect about this brazenly expensive graphics card is its branding. You'll notice that NVIDIA dropped "GeForce GTX" from
+                    its model name, simply calling it the "TITAN X Pascal". This makes "TITAN" a consumer graphics brand unto itself. Only NVIDIA's third
+                    since GeForce and Riva. This achieves two things. First, it adds to the exclusivity of this SKU, elevating TITAN above GeForce. Second,
+                    it adds a bit of ambiguity to whom this product targets as a buyer, letting NVIDIA get away with its steep price tag.<br />
+                    NVIDIA changed tactics to the way it approaches expensive graphics cards with this generation. Earlier, the company would develop a 
+                    performance-segment chip addressing sub-$600 price-points; and one "big chip" based on the architecture with which it powers high-end 
+                    GeForce products and Quadro (professional graphics) and Tesla (HPC) products. NVIDIA would find itself with unused on-die components - such 
+                    as FP64 (double-precision) CUDA cores that made their way to GeForce products - making up a bulk of company's sales for the silicon.
+                    <hr /><img src="~/Images/GPU/titan x bench.jpg" img-responsive; width="768" align="center"  vspace="5px" hspace="5px"  /><hr />
+                    This is something NVIDIA is avoiding with the current generation by developing two "big chips", the GP100, which made its debut with
+                    the Tesla P100 HPC accelerator featuring FP64 CUDA cores and exotic HBM2 memory, and the newer GP102 silicon, which is designed keeping
+                    in mind consumer graphics and professional graphics applications that don't use double-precision compute. This chip also trades HBM2 
+                    for the more affordable GDDR5X memory.  <br />
+                    The reviewed TITAN X Pascal is the first product based on the GP102 silicon. It physically features 3,840 CUDA cores spread across 30
+                    streaming multiprocessors (SM) and six graphics processing clusters (GPCs) from which 3,584 are enabled on the TITAN X Pascal. The GP102 
+                    is in essence a 1.5X upscale of the GP104 silicon. Also featured are 224 TMUs, 96 ROPs, and a 384-bit wide GDDR5X memory interface holding
+                    12 GB of memory.
+
+                    Due to lack of any real competition from AMD in the current generation, NVIDIA gets to be cocky with its pricing. NVIDIA is pricing the 
+                    TITAN X Pascal at a staggering $1,200. The company is directly marketing the card, doing away with add-in card (AIC) partners 
+                    (eg: ASUS, EVGA, Zotac, etc.). The company is also supplying the card through the OEM channel, to pre-built gaming PC vendors 
+                    (eg: CyberPowerPC, Alienware, etc.).
+
+                    <br />
+                </b>
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+

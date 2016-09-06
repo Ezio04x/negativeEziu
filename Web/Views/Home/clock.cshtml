@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "clock";
+}
+<
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+
+    <script>
+       var Greeter = (function () {
+    function Greeter(element) {
+        this.element = element;
+        this.element.innerHTML += "The time is: ";
+        this.span = document.createElement('span');
+        this.element.appendChild(this.span);
+        this.span.innerText = new Date().toUTCString();
+    }
+    Greeter.prototype.start = function () {
+        var _this = this;
+        this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
+    };
+    Greeter.prototype.stop = function () {
+        clearTimeout(this.timerToken);
+    };
+    return Greeter;
+}());
+window.onload = function () {
+    var el = document.getElementById('content');
+    var greeter = new Greeter(el);
+    greeter.start();
+};
+
+
+    </script>
+</head>
+<body>
+    <h1> Current time </h1>
+
+    <div id="content"></div>
+</body>
+</html>
