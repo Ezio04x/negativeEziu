@@ -59,7 +59,7 @@ html {
 
 body {
     margin: 0;
-    background-image: url('../Images/god_of_war_kratos_sony_santa_monica_110295_3840x2160.jpg');
+    background-image: url('~/Images/god_of_war_kratos_sony_santa_monica_110295_3840x2160.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
